@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Confluent.Kafka" Version="2.12.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.10" />
+		<PackageReference Include="StackExchange.Redis" Version="2.9.32" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\MatchMaking.Service.Dto\MatchMaking.Service.WebApi.Dto.csproj" />
+	</ItemGroup>
+
+</Project>
