@@ -29,10 +29,7 @@ public static class DependencyInjectionExtensions
     public static IServiceCollection AddAppControllers(this IServiceCollection services)
     {
         services.AddRateLimiter(RateLimiterHelper.Handle)
-            .AddControllers(options =>
-            {
-                options.Conventions.Add(new ApiRoutePrefixConvention());
-            })
+            .AddControllers(options => options.Conventions.Add(new ApiRoutePrefixConvention()))
             .AddApplicationPart(typeof(MatchInfoController).Assembly)
             .AddControllersAsServices();
         return services;

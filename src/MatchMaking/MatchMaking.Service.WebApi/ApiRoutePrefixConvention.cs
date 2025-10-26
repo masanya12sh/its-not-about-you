@@ -19,7 +19,7 @@ public class ApiRoutePrefixConvention : IApplicationModelConvention
             var matchedSelectors = controller.Selectors
                 .Where(x => x.AttributeRouteModel != null)
                 .ToList();
-            if (matchedSelectors.Any())
+            if (matchedSelectors.Count != 0)
             {
                 foreach (var selectorModel in matchedSelectors)
                 {
